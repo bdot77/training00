@@ -17,5 +17,10 @@ provider "azurerm" {
 # Create Resource Group 
 resource "azurerm_resource_group" "my_demo_rg1" {
   location = "eastus"
-  name = "Training00-MLA-my-demo-rg01"  
+  name = "Training00-MLA-my-demo-rg01" 
+  tags       = { 
+                 "GKUS:MSUSA" = "" 
+                 "Environment:NonProd" = ""
+                 "LockRequired:false" = ""
+               }
 }
